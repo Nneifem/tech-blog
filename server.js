@@ -9,6 +9,7 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const app = express();
 const PORT = process.env.PORT || 3001;
 
+// adding middleware 
 const hbs = exphbs.create({ helpers });
 
 const sess = {
@@ -28,6 +29,7 @@ const sess = {
 
 app.use(session(sess));
 
+// changing the default engine 
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
