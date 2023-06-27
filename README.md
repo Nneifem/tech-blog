@@ -1,98 +1,59 @@
 # tech-blog
 
-# Module 14 Mini-Project: Crowdfunding App
+## Description
 
-In this mini-project, you will work with a group to build a full-stack crowdfunding app using Node.js, Express.js, Sequelize, Handlebars.js, and MVC architecture.
+Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
 
-## User Stories
+- What was your motivation?
+- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
+- What problem does it solve?
+- What did you learn?
 
-* As a user, I want to see a list of current projects seeking funding.
+I built a tech blog in order for the user to be able to create and post their thoughts, feelings, and opinions anything techology related and be able to comment on other people's post. This can be an easily and more convenient way to ask or answer questions or just share the latest project the user is working on with other people who are interested. Working through this, I learned how to utilize handlebars and adding css and javascript help make the page responsive and to make it more pleasing to the eye.
 
-* As a user, I want to be able to create an account.
+## Installation
 
-* As a registered user, I want to post my own projects to ask for funding.
+In order to use this code you will need to install Node js. v16 and then in the integrated terminal you will need to type the following:
+  - npm i init -y
+  - npm i
+  - npm i dotenv express mysql2 sequelize
+  - npm i bcrypy
+  - npm i express-handlebars
+  - npm i express-session
+  - npm i connect-session-sequelize
 
-### Acceptance Criteria
+You also need to run the sql and seeds files, so to do that you will once again need to go into the integrated terminal, type in mysql -u root -p, enter your password, and source db/schema.sql to run the database. To run the seeds just type in npm run seeds and you are all set to run the code. 
 
-* It's done when the `/` homepage route renders a list of all projects from the database.
+## Usage
 
-* It's done when the `/project/:id` route renders an individual project's details based on the route parameter id.
+When you open the website, you are greeted with the dashboard that's either blank or have posts already made. If you clicked the login button on the top, you have the choice to login or sign up to create an account. Once you have done either of those you can make any comments on a post or go to the dashboard where you can create, modify, or delete your post. When you're done, you can logout of your account until you are ready to go back in.
 
-* It's done when the `/login` route renders a form to log in and a form to create a new account.
 
-* It's done when an existing user can enter their credentials on the login page to create a session on the server.
+## License
 
-* It's done when a new user can create an account on the login page and then be immediately logged in with a session.
+MIT License
 
-* It's done when the `/profile` route renders the logged-in user's projects and a form to create a new project.
+Copyright (c) 2023 Nneif
 
-* It's done when only a logged in user can visit the `/profile` route.
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-* It's done when a logged in user is redirected to `/profile` when they try to visit `/login` again.
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-* It's done when a user on the profile page can use the form to create a new project in the database.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 
-* It's done when a user on the profile page can select a "Delete" button to remove their project from the database.
 
-* It's done when a logged-in user can select a "Logout" button to remove their session.
-
-* It's done when the session for a logged-in user expires after a set time.
-
-* It's done when the API routes to create and delete posts are protected from non logged-in users.
-
-* It's done when the code is organized using MVC architecture.
-
-* It's done when the views are rendered with Handlebars.js templates.
-
-## Specifications 
-
-* The database models have the following fields and associations:
-
-  * `User`
-
-    * `id`: primary key
-
-    * `name`
-
-    * `email`
-
-    * `password`
-
-  * `Project`
-
-    * `id`: primary key
-
-    * `name`
-
-    * `description`
-
-    * `date_created`
-
-    * `needed_funding`
-
-    * `user_id`: foreign key that references `User.id`
-
-  * Users have many projects, and projects belong to a user.
-
-    * If a user is deleted, all associated projects are also deleted.
-
----
-
-## 💡 Hints
-
-* What tools can you use to test the existing API routes if you don't yet have a front end?
-
-* Where would you place the client-side JavaScript for capturing form data?
-
-* How can middleware help protect routes from non logged-in users?
-
-* How can Handlebars.js helpers (both built-in and custom) be used to render the desired results?
-
-## 🏆 Bonus
-
-If you have completed this activity, work through the following challenge with your partner to further your knowledge:
-
-* Add an `/edit/:id` route for logged in users to update their projects' details. Then deploy the app to Heroku!
-
----
-© 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+## Links
+Repo link: https://github.com/Nneifem/tech-blog
+Webpage Link: 
