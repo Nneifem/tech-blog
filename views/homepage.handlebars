@@ -1,0 +1,13 @@
+{{#each projects as |project| }}
+<div class="project-display">
+    <div class="project-section">
+        <h2>
+            <a href="/project/{{project.id}}">{{project.name}}</a>
+        </h2>
+        <p>Posted by {{project.user.name}} on {{format_date project.date_created}}</p>
+    </div>
+    <div class="project-section-post">
+        <p>{{project.description}}</p>
+    </div>
+</div>
+{{/each}}
