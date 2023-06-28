@@ -12,6 +12,7 @@ router.get('/', async (req, res) => {
                 },
             ],
         });
+        console.log(projectData);
 
         const projects = projectData.map((project) => project.get({ plain: true }));
 
